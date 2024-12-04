@@ -4,8 +4,7 @@ import streamlit as st
 st.title("------- SHREYANSH KHALI CODER -------")
 
 # Display Image with Caption
-st.image(
-    r"C:\Users\rahul\OneDrive\Pictures\Camera Roll\WIN_20241202_20_36_44_Pro.jpg",
+st.image( "https://i.ibb.co/x5sFZyD/WIN-20241202-20-36-44-Pro.jpg",
     caption="Shreyansh Khali",
 )
 
