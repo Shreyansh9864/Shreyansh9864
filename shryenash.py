@@ -1,50 +1,54 @@
 import streamlit as st
 
-# Title Section
-st.title("------- SHREYANSH KHALI CODER -------")
+# Page Navigation with Sidebar
+page = st.sidebar.radio("Select a page", ["Home"])
 
-# Display Image with Caption
-st.image( "https://i.ibb.co/x5sFZyD/WIN-20241202-20-36-44-Pro.jpg",
-    caption="Shreyansh Khali",
-)
+if page == "Home":
+    # Create two columns for content layout
+    col1, col2 = st.columns([1, 2])  # Adjust the ratio to control the width of columns
 
-# About Me Section
-st.subheader("About Me")
-st.write("""
-Hello! I started coding in 5th standard because I was too addicted to playing games. 
-To overcome that addiction, I began learning to code, and now I dream of becoming an AI Engineer.  
+    # Add the image to the first column
+    with col1:
+        st.image("https://i.ibb.co/McNrwYq/11zon-cropped.png", width=200)
 
-**Key Highlights:**  
-- **LLM Coder**  
-- **Inspirations:** My dad and CodeWithHarry (CWH)  
-- **Skills:** HTML, CSS, JavaScript, Python, and Java  
-- Currently studying in **8C3C at Sri Chaitanya Techno School, Kaggadasapura-1**  
-""")
+    # Add styled text to the second column with different colors for words
+    with col2:
+        st.markdown(
+            """
+            <p style="font-size:50px; font-weight:bold;">
+                <span style="color:#CC9966;">Velocity</span>
+                <span style="color:#1E90FF;">Nodes</span>
+            </p>
+            """,
+            unsafe_allow_html=True
+        )
 
-st.markdown("**I hope to see you next week with more coding updates. Bye for now!** 👋")
+    # Add description and bold first 4 lines
+    st.image("https://i.imgur.com/BTMaNKG.png")
+    st.markdown(
+        """
+        ### Velocity | Free Hosting 24/7  
+        🔥 **#1 World's First Free Hosting with Quality**  
+        🚀 **Welcome to Velocity Hosting 🚀**
 
-# Achievements Section
-st.subheader("My Achievements (Online)")
-st.text("""
-- GPT-4o 
-- Object Detection 
-- Face Detection (Human) 
-- Voice GPT 
-- And more!
-""")
-
-# Links Section
-st.subheader("Connect with Me")
-st.markdown("""
-- [GitHub Account](https://github.com/Shreyansh9864)  
-- [Instagram Account](https://www.instagram.com/khali_shreyansh/)  
-- [Facebook Account](https://www.facebook.com/profile.php?id=61559551635488)  
-- [YouTube Channel](https://www.youtube.com/@BenchNap952)
-""")
-
-# Closing Note
-st.subheader("What's Next?")
-st.write("""
-Stay tuned for my next coding project update coming next week!  
-Until then, peace ✌️ and bye! 
-""")
+        ---
+        **🔹 Affordable Pricing:**  
+        Enjoy premium-quality Discord server hosting at just $2 per month—perfect for personal or community use!  
+        <br><br>
+        **🔹 Free Minecraft Hosting:**  
+        Get your own Minecraft server hosted for free! Whether you're building a world with friends or hosting a community, we provide smooth and reliable server hosting.  
+         <br><br>
+        **🔹 24/7 Uptime:**  
+        With reliable server performance, your Discord and Minecraft servers stay up and running, day and night.  
+         <br><br>
+        **🔹 Easy Setup:**  
+        Our user-friendly platform makes it simple to get your Discord and Minecraft servers online in minutes!  
+        <br><br>
+        **🔹 Support Team:**  
+        Need help? Our support team is available to assist you with any questions or issues.  
+         <br><br>
+        Ready to level up your Discord and Minecraft experience?  
+        Visit our website and get started today! 🌐
+        """,
+        unsafe_allow_html=True
+    )
