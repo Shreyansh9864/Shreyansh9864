@@ -1,0 +1,15 @@
+print("Hi to press enter key to start this is marks calculator!")
+science = int(input("input enter the marks for scince"))
+Maths = int(input("input enter the marks for Maths"))
+SST = int(input("input enter the marks for SST"))
+Sl = int(input("Enter the marks for SL"))
+TL = int(input("input enter the marks for TL"))
+FL = int(input("input enter the marks for FL"))
+TOTAL = [science+Maths+SST+Sl+TL+FL]
+print("The toltal is :",TOTAL)
+print("Do you want this in percantage")
+x=int(input("ENter the mark u obtantined"))
+y=int(input("What the total marks"))
+marks =int( (x/y)*100)
+
+print("Y got got percentage is ",int(marks))
